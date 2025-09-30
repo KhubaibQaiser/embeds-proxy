@@ -1,7 +1,7 @@
 import express, { NextFunction, Request, Response } from "express";
 import * as dotenv from "dotenv";
 import path from "path";
-
+// Add a comment
 dotenv.config({ path: path.resolve(process.cwd(), ".env") });
 
 function getCloudfrontBase(queryInjectorUrl?: string): string {
