@@ -132,5 +132,8 @@ app.get("/live", (req: Request, res: Response) => {
 
 export default app;
 
-const port = process.env.PORT || 4000;
-app.listen(port, () => console.log(`Proxy service running at http://localhost:${port}`));
+// Local development server
+if (process.env.NODE_ENV !== "production") {
+  const port = process.env.PORT || 4000;
+  app.listen(port, () => console.log(`Proxy service running at http://localhost:${port}`));
+}
